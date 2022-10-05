@@ -37,12 +37,12 @@ def checker(text):
 def home():
     return 'VAIBHAV OP'
 
-@app.route('/api/v1/abuse', methods=['POST', 'GET'])
+@app.route('/api', methods=['POST', 'GET'])
 def abuseapi():
     abuses = get_content("cuss_words.txt")
     return jsonify(words=abuses)
 
-@app.route('/api/v1/abuse/check', methods=['POST', 'GET'])
+@app.route('/api/check', methods=['POST', 'GET'])
 def check():
     text = request.args.get('text')
     if text!=None:
