@@ -17,7 +17,7 @@ def get_content(filepath):
    # return {'words': list(lines)}
 
 def rmSpCh(text):
-    cha = ['+','*',':',';','!','?','/','_','-','|','.',',','@','#','$','%','=']
+    cha = ['+','*',':',';','!','?','/','\\','_','-','|','.',',','@','#','$','%','=']
     for s in cha:
         text=text.replace(s, '')
     return text
@@ -35,7 +35,7 @@ def checker(text):
         
 @app.route('/', methods=['POST', 'GET'])
 def home():
-    return 'VAIBHAV OP'
+    return 'CodentX'
 
 @app.route('/api', methods=['POST', 'GET'])
 def abuseapi():
